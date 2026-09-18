@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
+    <title>Njeze Peter Nnabuike | Full-Stack Developer</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet">
         <link rel="shortcut icon" href="./image/svg (2).svg" type="image/x-icon">
 </head>
@@ -19,45 +19,85 @@
     <!-- ================= NAVIGATION ================= -->
     <header>
         <div class="top-bar">
-            <div class="logo">Code Ninja</div>
+            <a href="#home" class="logo"><i class="fa-solid fa-code"></i> Code Ninja</a>
 
-
-
-            <!-- Hamburger (outside nav) -->
-            <div class="hamburger" onclick="toggleMenu()">
-                ☰
-            </div>
-
-
-            <!-- GRID MENU (hidden by default) -->
-            <div class="mobile-menu" id="mobileMenu">
+            <!-- Desktop nav / mobile dropdown (same element, restyled per breakpoint) -->
+            <nav class="mobile-menu" id="mobileMenu">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
                 <a href="#contact">Contact</a>
+            </nav>
+
+            <!-- Hamburger (outside nav, mobile only) -->
+            <div class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
             </div>
         </div>
     </header>
 
     <!-- ================= HERO SECTION ================= -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h2>NJEZE PETER NNABUIKE</h2>
-            <p> Full-Stack Developer/Specialized on Backend Development</p>
-            <a href="./cv/PETER NJEZE.pdf" download="My-portfolio.pdf" class="btn">Download
-                Resume</a>
+        <div class="hero-grid">
+
+            <div class="hero-content">
+                <span class="hero-eyebrow">Full-Stack Developer</span>
+                <h1>NJEZE PETER<br>NNABUIKE</h1>
+                <p class="hero-role">Specialized in Backend Development</p>
+                <p class="hero-intro">
+                    I build scalable, secure, and user-centered web applications —
+                    from REST APIs and real-time systems to clean, responsive interfaces.
+                </p>
+                <div class="hero-actions">
+                    <a href="./cv/PETER NJEZE.pdf" download="My-portfolio.pdf" class="btn">Download Resume</a>
+                </div>
+            </div>
+
+            <div class="hero-portrait-wrap">
+                <div class="hero-portrait-glow"></div>
+                <img class="hero-portrait" src="./image/Gemini_Generated_Image_2gutn42gutn42gut.png"
+                    alt="Njeze Peter Nnabuike portrait">
+            </div>
+
+            <div class="hero-side">
+                <div class="hero-side-block">
+                    <span class="hero-side-label">About Me</span>
+                    <p>Full-stack developer building scalable APIs, real-time systems, and secure web apps.</p>
+                    <a href="#about" class="hero-side-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="hero-side-block">
+                    <span class="hero-side-label">My Work</span>
+                    <p>From SocialMarketHQ to exam platforms — explore projects across the stack.</p>
+                    <a href="#projects" class="hero-side-link">Browse Projects <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="hero-side-block hero-social">
+                    <span class="hero-side-label">Follow Me</span>
+                    <div class="hero-social-icons">
+                        <a href="https://www.linkedin.com/in/peter-njeze-688301311/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/XDENTERTAINMENT" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="mailto:nnabuikenjeze@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="hero-image">
-            <img src="./image/Gemini_Generated_Image_2gutn42gutn42gut.png" alt="Profile picture">
-        </div>
+
+        <a href="#about" class="hero-scroll" aria-label="Scroll down">
+            <span class="hero-scroll-line"></span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
     </section>
 
    <!-- ================= ABOUT ================= -->
 <section id="about" class="about">
     <h2>About Me</h2>
 
-    <div class="about-container">
+    <div class="about-container reveal">
 
         <div class="about-image">
             <img src="./image/peter.jpg" alt="About Peter">
@@ -116,7 +156,7 @@
 <section id="skills" class="skills">
     <h2>My Skills</h2>
 
-    <div class="skills-grid">
+    <div class="skills-grid reveal">
 
         <!-- Frontend -->
         <div class="skill-card">
@@ -257,7 +297,7 @@
     <!-- ================= PROJECTS ================= -->
     <section id="projects" class="projects">
         <h2>My Projects</h2>
-        <div class="projects-grid">
+        <div class="projects-grid reveal">
    
 
 
@@ -498,7 +538,7 @@
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
 
-        <div class="contact-container">
+        <div class="contact-container reveal">
 
             <!-- Form -->
             <form class="contact-form">
